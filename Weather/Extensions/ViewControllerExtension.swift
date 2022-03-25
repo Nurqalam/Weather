@@ -34,7 +34,6 @@ extension MainViewController {
         alert.addAction(search)
         alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
-        
     }
 }
 
@@ -46,5 +45,4 @@ extension MainViewController {
         searchButton.layer.cornerRadius = searchButton.frame.self.height / 2
         searchButton.clipsToBounds = true
     }
-    
 }

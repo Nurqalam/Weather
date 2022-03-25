@@ -21,13 +21,18 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapRounded()
-        
+        networkWeatherManager.delegate = self
     }
 
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         presentSearchAlertController(withTitle: title, message: nil, style: .alert) { (city) in
-            self.networkWeatherManager.fetchingWeatherManager(withCity: city)
+            self.networkWeatherManager.fetchingWeatherManager(withCity: city) 
         }
     }
 }
 
+extension MainViewController: NetworkWeatherManagerDelegate {
+    func updateInterface(_: NetworkWeatherManager, with currentWeather: CurrentWeather) {
+        print(currentWeather.cityName)
+    }
+}
