@@ -12,11 +12,12 @@ import CoreLocation
 class MainViewController: UIViewController {
     
     var networkWeatherManager = NetworkWeatherManager()
-    lazy var locationManager: CLLocationManager = {
+    
+    lazy var locationManag: CLLocationManager = {
         let locationMng = CLLocationManager()
         locationMng.delegate = self
         locationMng.desiredAccuracy = kCLLocationAccuracyKilometer
-        locationMng.requestWhenInUseAuthorization()
+        locationMng.requestAlwaysAuthorization()
         return locationMng
     }()
     
@@ -37,7 +38,7 @@ class MainViewController: UIViewController {
         }
     
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.requestLocation()
+            locationManag.requestLocation()
         }
     }
 
@@ -55,23 +56,9 @@ class MainViewController: UIViewController {
             self.temperatureLabel.text = weather.temperatureString
             self.feelsLikeTempLabel.text = weather.feelsLikeTempString
             self.weatherIconImageView.image = UIImage(systemName: weather.systemIconNameString)
+            
         }
     }
 }
 
 
-// MARK: CllocationManager delegate
-extension MainViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else {return}
-        let latitude = location.coordinate.latitude
-        let longitude = location.coordinate.longitude
-        
-        networkWeatherManager.fetchCurrentWeather(forRequestType: .coordinate(latitude: latitude, longitude: longitude))
-        
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
-    }
-}

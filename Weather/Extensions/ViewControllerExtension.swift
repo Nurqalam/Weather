@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import CoreLocation
 
 extension MainViewController {
     
@@ -44,5 +44,26 @@ extension MainViewController {
         searchButton.layer.masksToBounds = false
         searchButton.layer.cornerRadius = searchButton.frame.self.height / 2
         searchButton.clipsToBounds = true
+    }
+}
+
+
+
+// MARK: CllocationManager delegate
+extension MainViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else {
+            print("error")
+            return
+        }
+        let latitude = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
+        
+        self.networkWeatherManager.fetchCurrentWeather(forRequestType: .coordinate(latitude: latitude, longitude: longitude))
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
 }
