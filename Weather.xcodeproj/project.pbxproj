@@ -17,6 +17,7 @@
 		B5416A5F27ED9C82000CBAA0 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5416A5E27ED9C82000CBAA0 /* NetworkWeatherManager.swift */; };
 		B5416A6327EDB633000CBAA0 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5416A6227EDB633000CBAA0 /* CurrentWeatherData.swift */; };
 		B5416A6E27EE2DD5000CBAA0 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5416A6D27EE2DD5000CBAA0 /* CurrentWeather.swift */; };
+		B5416A7127EEF3E6000CBAA0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5416A7027EEF3E6000CBAA0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B5416A5E27ED9C82000CBAA0 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
 		B5416A6227EDB633000CBAA0 /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
 		B5416A6D27EE2DD5000CBAA0 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		B5416A7027EEF3E6000CBAA0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				B5416A3D27ED9B55000CBAA0 /* SceneDelegate.swift */,
 				B5416A4427ED9B56000CBAA0 /* Assets.xcassets */,
 				B5416A4927ED9B56000CBAA0 /* Info.plist */,
+				B5416A7027EEF3E6000CBAA0 /* Constants.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				B5416A5F27ED9C82000CBAA0 /* NetworkWeatherManager.swift in Sources */,
 				B5416A3C27ED9B55000CBAA0 /* AppDelegate.swift in Sources */,
 				B5416A3E27ED9B55000CBAA0 /* SceneDelegate.swift in Sources */,
+				B5416A7127EEF3E6000CBAA0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
