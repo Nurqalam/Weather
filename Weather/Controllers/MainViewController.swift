@@ -17,10 +17,11 @@ class MainViewController: UIViewController {
         let locationMng = CLLocationManager()
         locationMng.delegate = self
         locationMng.desiredAccuracy = kCLLocationAccuracyKilometer
-        locationMng.requestAlwaysAuthorization()
+        locationMng.requestWhenInUseAuthorization()
         return locationMng
     }()
     
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var weatherIconImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var feelsLikeTempLabel: UILabel!
@@ -33,8 +34,7 @@ class MainViewController: UIViewController {
         mapRounded()
         
         networkWeatherManager.onCompletion = { [weak self] currentWeather in
-            guard let self = self else {return}
-            self.updateInterfaceWith(weather: currentWeather)
+            self?.updateInterfaceWith(weather: currentWeather)
         }
     
         if CLLocationManager.locationServicesEnabled() {
@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
             self.temperatureLabel.text = weather.temperatureString
             self.feelsLikeTempLabel.text = weather.feelsLikeTempString
             self.weatherIconImageView.image = UIImage(systemName: weather.systemIconNameString)
-            
+            self.backgroundImage.image = UIImage(named: weather.backgroundWeatherImage)
         }
     }
 }

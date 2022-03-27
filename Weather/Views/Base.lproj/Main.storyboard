@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="i85-pC-dbx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="i85-pC-dbx">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="prn-3S-u9R">
@@ -72,7 +72,7 @@
                                     <constraint firstAttribute="height" constant="70" id="k61-aK-uEX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="50"/>
-                                <color key="textColor" name="AccentColor"/>
+                                <color key="textColor" name="infoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -93,6 +93,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="i85-pC-dbx" id="hZd-Ly-Qf5"/>
                         <outlet property="cityLabel" destination="cQ4-rl-2SX" id="jlD-TG-k1c"/>
                         <outlet property="feelsLikeTempLabel" destination="5GB-z1-SgC" id="NC3-vj-zP7"/>
                         <outlet property="searchButton" destination="KIl-Vc-Mp1" id="ogr-Ud-aze"/>
@@ -109,9 +110,6 @@
         <image name="background" width="375" height="667"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="nosign" catalog="system" width="128" height="121"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="infoColor">
             <color red="0.95099997520446777" green="1" blue="0.66900002956390381" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

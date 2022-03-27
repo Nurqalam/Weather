@@ -43,6 +43,28 @@ struct CurrentWeather {
         }
     }
     
+    var backgroundWeatherImage: String {
+        switch conditionID {
+        case 200...232:
+            return "thunder"
+        case 300...321:
+            return "drizzle"
+        case 500...531:
+            return "rain"
+        case 600...622:
+            return "snow"
+        case 701...781:
+            return "atmosphere"
+        case 800:
+            return "clear"
+        case 801...804:
+            return "clouds"
+        default:
+            return "background"
+        }
+    }
+
+    
     
     init?(currentWeatherData: CurrentWeatherData) {
         cityName = currentWeatherData.name
