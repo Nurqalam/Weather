@@ -7,4 +7,4 @@ training project, showing weather by city
 - MVC
 
 #
-<img width="221" alt="Screen Shot 2022-03-27 at 16 24 21" src="https://user-images.githubusercontent.com/96972423/160280191-bb991f8a-6c6c-439b-a05a-640fe99ea389.png">         <img width="221" alt="Screen Shot 2022-03-27 at 16 44 47" src="https://user-images.githubusercontent.com/96972423/160280194-cd8acb0b-4a64-4fb3-8385-51456fcf8160.png">
+<img width="221" alt="Screen Shot 2022-03-27 at 16 24 21" src="https://user-images.githubusercontent.com/96972423/160280191-bb991f8a-6c6c-439b-a05a-640fe99ea389.png">         <img width="221" alt="Screen Shot 2022-03-27 at 16 44 47" src="https://user-images.githubusercontent.com/96972423/160280194-cd8acb0b-4a64-4fb3-8385-51456fcf8160.png">        <img width="221" alt="Screen Shot 2022-03-27 at 16 18 14" src="https://user-images.githubusercontent.com/96972423/160280522-1c4c466f-1e92-428e-ad6b-cdbdee349050.png">
